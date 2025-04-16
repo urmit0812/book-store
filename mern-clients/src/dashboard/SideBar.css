@@ -1,0 +1,47 @@
+input,
+select,
+textarea {
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid #ccc;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #888;
+}
+
+select {
+    background-color: white !important;
+    color: black !important;
+}
+
+textarea {
+    background-color: white !important;
+    color: black !important;
+}
+
+[data-testid="flowbite-card"] {
+    background-color: white !important;
+    color: black !important;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb !important;
+    /* Light border */
+    padding: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+[data-testid="flowbite-card"] h5 {
+    color: black !important;
+}
+
+[data-testid="flowbite-card"] p {
+    color: #374151 !important;
+    /* Dark gray text */
+}
+
+[data-testid="flowbite-card"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
