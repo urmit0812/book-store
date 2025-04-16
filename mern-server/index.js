@@ -1,4 +1,5 @@
 require('dotenv').config();
+const path = require("path");
 const express = require('express');
 const cors = require('cors');
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
@@ -109,37 +110,7 @@ async function startServer() {
     });
 
 
-    // chatgpt
-    // Get all books (Filtered by role)
-  // app.get("/all-books", async (req, res) => {
-  // try {
-  //   const { email } = req.query; // Frontend se email milega
-  //   let query = {};
-
-  //   if (!email) {
-  //     return res.status(400).json({ message: "Email is required!" });
-  //   }
-
-  //   // User ka role check karna
-  //   const user = await usersCollection.findOne({ email });
-
-  //   if (!user) {
-  //     return res.status(404).json({ message: "User not found" });
-  //   }
-
-  //   if (user.role !== "admin") {
-  //     query = { author_email: email }; // Normal author ko sirf apni books dikhein
-  //   }
-
-  //   const books = await bookCollections.find(query).toArray();
-  //   res.send(books);
-  // } catch (error) {
-  //   console.error("Error retrieving books:", error);
-  //   res.status(500).json({ message: "Internal Server Error" });
-  // }
-  // });
-
-
+   
     // Get single book
     app.get("/books/:id", async (req, res) => {
       const id = req.params.id;
